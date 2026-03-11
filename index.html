@@ -28,7 +28,7 @@
             <div class="hero-text">
                 <h1>Hi, I'm <span class="highlight">Jayson</span></h1>
                 <p class="subtitle">Computer Engineering Student</p>
-                <p class="hero-description">Passionate about embedded systems, programming, and building innovative solutions.</p>
+<p class="hero-description">Passionate about programming and continuously improving my skills in both software and hardware to develop efficient and innovative solutions.</p>
                 <div class="hero-buttons">
                     <a href="#projects" class="btn btn-primary">View Projects</a>
                     <a href="#contact" class="btn btn-secondary">Get in Touch</a>
@@ -108,9 +108,12 @@
         <div class="container">
             <h2 class="section-title">Projects</h2>
             <div class="projects-grid">
-                <div class="project-card">
+                <div class="project-card" data-image="assets/LineFollower.png">
                     <div class="project-image">
                         <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="project-overlay">
+                        <span><i class="fas fa-eye"></i> View Project</span>
                     </div>
                     <div class="project-info">
                         <h3>Line Follower Robot</h3>
@@ -123,9 +126,12 @@
                     </div>
                 </div>
 
-                <div class="project-card">
+                <div class="project-card" data-image="assets/worktracker.png">
                     <div class="project-image">
                         <i class="fas fa-tasks"></i>
+                    </div>
+                    <div class="project-overlay">
+                        <span><i class="fas fa-eye"></i> View Project</span>
                     </div>
                     <div class="project-info">
                         <h3>Work Tracker Web App</h3>
@@ -135,12 +141,18 @@
                             <span>SQL</span>
                             <span>Figma</span>
                         </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Kamil024/WorkTracker" target="_blank" class="btn-code"><i class="fab fa-github"></i> View Code</a>
+                        </div>
                     </div>
                 </div>
 
-                <div class="project-card">
+                <div class="project-card" data-image="https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&h=400&fit=crop">
                     <div class="project-image">
                         <i class="fas fa-microchip"></i>
+                    </div>
+                    <div class="project-overlay">
+                        <span><i class="fas fa-eye"></i> View Project</span>
                     </div>
                     <div class="project-info">
                         <h3>Digital Logic Design (VHDL)</h3>
@@ -150,12 +162,18 @@
                             <span>GHDL</span>
                             <span>Digital Circuits</span>
                         </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Kamil024/VHDL-sir-Jep2" target="_blank" class="btn-code"><i class="fab fa-github"></i> View Code</a>
+                        </div>
                     </div>
                 </div>
 
-                <div class="project-card">
+                <div class="project-card" data-image="assets/payroll.jpg">
                     <div class="project-image">
                         <i class="fas fa-money-bill-wave"></i>
+                    </div>
+                    <div class="project-overlay">
+                        <span><i class="fas fa-eye"></i> View Project</span>
                     </div>
                     <div class="project-info">
                         <h3>Payroll System</h3>
@@ -165,12 +183,18 @@
                             <span>Firebase</span>
                             <span>OOP</span>
                         </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Kamil024/PayRoll-Projects" target="_blank" class="btn-code"><i class="fab fa-github"></i> View Code</a>
+                        </div>
                     </div>
                 </div>
 
-                <div class="project-card">
+                <div class="project-card" data-image="assets/FPP.png">
                     <div class="project-image">
                         <i class="fas fa-gamepad"></i>
+                    </div>
+                    <div class="project-overlay">
+                        <span><i class="fas fa-eye"></i> View Project</span>
                     </div>
                     <div class="project-info">
                         <h3>Game Application</h3>
@@ -180,12 +204,18 @@
                             <span>Kotlin</span>
                             <span>Android</span>
                         </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Kamil024/FPP" target="_blank" class="btn-code"><i class="fab fa-github"></i> View Code</a>
+                        </div>
                     </div>
                 </div>
 
-                <div class="project-card">
+                <div class="project-card" data-image="assets/555Timer.jpg">
                     <div class="project-image">
                         <i class="fas fa-stopwatch"></i>
+                    </div>
+                    <div class="project-overlay">
+                        <span><i class="fas fa-eye"></i> View Project</span>
                     </div>
                     <div class="project-info">
                         <h3>555 Timer Circuit</h3>
@@ -205,7 +235,6 @@
         <div class="container">
             <h2 class="section-title">Get In Touch</h2>
             <div class="contact-content">
-                <p>Feel free to reach out for collaborations or just a friendly chat!</p>
                 <div class="social-links">
                     <a href="mailto:libaton.jayson024@gmail.com" class="social-link" title="Email">
                         <i class="fas fa-envelope"></i>
@@ -231,8 +260,17 @@
     </section>
 
     <footer class="footer">
-        <p>&copy; 2024 Jayson. All rights reserved.</p>
+        <p>&copy; Jayson. All rights reserved.</p>
     </footer>
+
+    <!-- Modal for Project Images -->
+    <div class="modal" id="projectModal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <img src="" alt="Project Image" id="modalImage">
+            <div class="modal-caption" id="modalCaption"></div>
+        </div>
+    </div>
 
     <script>
         // Theme Toggle
@@ -278,6 +316,52 @@
                 navbar.classList.add('scrolled');
             } else {
                 navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Modal Functionality
+        const modal = document.getElementById('projectModal');
+        const modalImage = document.getElementById('modalImage');
+        const modalCaption = document.getElementById('modalCaption');
+        const modalClose = document.querySelector('.modal-close');
+
+        // Add click event to all project cards (but not on links/buttons inside)
+        document.querySelectorAll('.project-card').forEach(card => {
+            card.addEventListener('click', function(e) {
+                // Don't open modal if clicking on a link or button inside the card
+                if (e.target.closest('.btn-code')) {
+                    return;
+                }
+                
+                const imageSrc = this.getAttribute('data-image');
+                const caption = this.querySelector('h3').textContent;
+                
+                // Show loading skeleton
+                modalImage.classList.add('skeleton');
+                
+                modalImage.src = imageSrc;
+                modalCaption.textContent = caption;
+                modal.style.display = 'block';
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        // Remove skeleton when image loads
+        modalImage.addEventListener('load', function() {
+            modalImage.classList.remove('skeleton');
+        });
+
+        // Close modal when clicking X
+        modalClose.addEventListener('click', function() {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        });
+
+        // Close modal when clicking outside
+        window.addEventListener('click', function(e) {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
             }
         });
     </script>
