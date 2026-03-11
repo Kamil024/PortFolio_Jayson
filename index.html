@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jayson - Computer Engineering Student</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">Jayson</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="theme-toggle" id="themeToggle" title="Toggle Theme">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Hi, I'm <span class="highlight">Jayson</span></h1>
+                <p class="subtitle">Computer Engineering Student</p>
+                <p class="hero-description">Passionate about embedded systems, programming, and building innovative solutions.</p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">View Projects</a>
+                    <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="assets/profile.jpg" alt="Jayson" onerror="this.src='https://via.placeholder.com/300x300?text=Jayson'">
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <p>Motivated Computer Engineering student at the University of St. La Salle with hands-on experience in Java, C++, and Kotlin. I have experience working with embedded systems, PIC microcontrollers, and circuit design using MPLAB and simulation tools. Hands-on experience with HDL (VHDL) for digital circuit design.</p>
+                <br>
+                <p>I enjoy building both software and hardware projects such as robotics systems, desktop applications, and numerical method solvers.</p>
+                <br>
+                <p>Aspiring to become a Full Stack Developer, System Engineer, and Cybersecurity Specialist.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <i class="fas fa-code"></i>
+                    <h3>Programming</h3>
+                    <ul>
+                        <li>Java (OOP)</li>
+                        <li>C++</li>
+                        <li>Kotlin</li>
+                        <li>Python</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-microchip"></i>
+                    <h3>Embedded Systems</h3>
+                    <ul>
+                        <li>PIC Microcontroller</li>
+                        <li>Assembly Programming</li>
+                        <li>555 Timer Circuits</li>
+                        <li>Circuit Design</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-database"></i>
+                    <h3>Data & Algorithms</h3>
+                    <ul>
+                        <li>Data Structures</li>
+                        <li>Algorithms</li>
+                        <li>SQL Database</li>
+                        <li>Firebase</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-tools"></i>
+                    <h3>Tools</h3>
+                    <ul>
+                        <li>VS Code</li>
+                        <li>Android Studio</li>
+                        <li>MPLAB</li>
+                        <li>Proteus</li>
+                        <li>AutoCAD</li>
+                        <li>VHDL / GHDL</li>
+                        <li>Figma</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="project-info">
+                        <h3>Line Follower Robot</h3>
+                        <p>Designed an autonomous robot using NAND/OR logic gates and an H-Bridge motor driver for real-time path detection and directional control.</p>
+                        <div class="project-tags">
+                            <span>PIC Microcontroller</span>
+                            <span>H-Bridge</span>
+                            <span>Embedded Systems</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <div class="project-info">
+                        <h3>Work Tracker Web App</h3>
+                        <p>Designed high-fidelity prototypes in Figma to enhance the user interface and integrated a SQL database to manage real-time networked data storage and preprocessing.</p>
+                        <div class="project-tags">
+                            <span>Python</span>
+                            <span>SQL</span>
+                            <span>Figma</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <div class="project-info">
+                        <h3>Digital Logic Design (VHDL)</h3>
+                        <p>Simulated and tested digital circuits using VHDL and GHDL for microprocessor and hardware system applications.</p>
+                        <div class="project-tags">
+                            <span>VHDL</span>
+                            <span>GHDL</span>
+                            <span>Digital Circuits</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-money-bill-wave"></i>
+                    </div>
+                    <div class="project-info">
+                        <h3>Payroll System</h3>
+                        <p>Collaborated on a payroll management system using Java and Firebase for secure, cloud-based data storage and object-oriented design.</p>
+                        <div class="project-tags">
+                            <span>Java</span>
+                            <span>Firebase</span>
+                            <span>OOP</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <div class="project-info">
+                        <h3>Game Application</h3>
+                        <p>Enhanced a mobile game by improving UI/UX design and implementing optimized algorithms for better performance and gameplay logic.</p>
+                        <div class="project-tags">
+                            <span>Java</span>
+                            <span>Kotlin</span>
+                            <span>Android</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-stopwatch"></i>
+                    </div>
+                    <div class="project-info">
+                        <h3>555 Timer Circuit</h3>
+                        <p>Designed and implemented circuits using 555 timer IC for various timing applications.</p>
+                        <div class="project-tags">
+                            <span>555 Timer</span>
+                            <span>Circuit Design</span>
+                            <span>Electronics</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <p>Feel free to reach out for collaborations or just a friendly chat!</p>
+                <div class="social-links">
+                    <a href="mailto:libaton.jayson024@gmail.com" class="social-link" title="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="https://github.com/Kamil024" target="_blank" class="social-link" title="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/jayson-libaton-8316073b2/" target="_blank" class="social-link" title="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://discord.com/users/448346972705914881" target="_blank" class="social-link" title="Discord">
+                        <i class="fab fa-discord"></i>
+                    </a>
+                    <a href="https://www.facebook.com/XxNoGainNoPainXNoGameNoLifexX" target="_blank" class="social-link" title="Facebook">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="https://t.me/Kami_Jayson" target="_blank" class="social-link" title="Telegram">
+                        <i class="fab fa-telegram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 Jayson. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Theme Toggle
+        const themeToggle = document.getElementById('themeToggle');
+        const body = document.body;
+        const icon = themeToggle.querySelector('i');
+
+        // Check saved theme
+        if (localStorage.getItem('theme') === 'dark') {
+            body.classList.add('dark-theme');
+            icon.classList.remove('fa-moon');
+            icon.classList.add('fa-sun');
+        }
+
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-theme');
+            
+            if (body.classList.contains('dark-theme')) {
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+                localStorage.setItem('theme', 'light');
+            }
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Navbar background on scroll
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>
+
